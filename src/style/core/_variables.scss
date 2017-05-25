@@ -1,0 +1,21 @@
+/*---- FONTS ----*/
+$font-primary-light			: 		'DecimaNovaProLight', sans-serif;
+$font-primary-bold      : 		'DecimaNovaProBold', sans-serif;
+$font-primary-regular   : 		'DecimaNovaProRegular', sans-serif;
+$font-header 			      : 		'PT Serif', serif;
+$font-size-base			    : 		16px;
+$line-height-base		    : 		30px;
+
+
+/*---- COLORS ----*/
+$primary				        :		  #00abff;
+$primary-dark           :		  darken( $primary, 10%);
+$white 					        : 		#ffffff;
+$blue                   :     #105788;
+$blue-dark              :     #002341;
+$blue-darker            :     #00172b;
+$black                  :     #000000;
+$grey                   :     #e1e1e1;
+
+/*---- EFFECTS ----*/
+$transition-base		    : 		0.33s;

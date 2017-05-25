@@ -1,0 +1,264 @@
+body {
+  padding-top: 70px;
+  font-family: $font-primary-light;
+  font-size:$font-size-base;
+  line-height: $line-height-base;
+  font-style: normal;
+  color: $black;
+  background: $white;
+  position: relative;
+
+  @include mobile-small {
+    padding-top: 68px;
+  }
+}
+a {
+  color: $primary;
+  transition: color $transition-base;
+  
+  &:hover, &:focus {
+    color: $primary-dark;
+    text-decoration: none;
+  }
+
+  &[rel*=phone] {
+    color: #fff;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $font-header;
+}
+
+header {
+  border-top: 4px solid $primary;
+  background: $blue-darker;
+  height: 70px;
+  border-bottom: 1px solid $blue-dark;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  @include mobile-small {
+    height: 68px;
+  }
+
+  .logo {
+    a {
+      display: inline-block;
+      margin-top: 14px;
+      img {
+        width: 124px;
+        height: 29px;
+      }
+    }
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.hero {
+  background: $blue-darker;
+  color: #fff;
+  border-bottom: 1px solid $blue-dark;
+  padding: 16px 0 27px;
+  
+  @include mobile-small {
+    display: none;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 58px;
+    max-width: 980px;
+
+    @include mobile {
+      font-size: 6.5vmin;
+      line-height: 7.8vmin;
+    }
+  }
+}
+
+footer {
+  background: $blue-darker;
+  border-top: 4px solid $primary;
+  color: #fff;
+  padding-top: 27px;
+  padding-bottom: 32px;
+  overflow: hidden;
+
+  .container-fluid {
+    @include mobile-small {
+      padding-right: 13px;
+      padding-left: 13px;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 20px;
+  }
+
+  @include mobile-small {
+    padding-top: 17px;
+  }
+
+  .footer_contacts {
+    padding-bottom: 34px;
+    border-bottom: 1px solid $blue-dark;
+
+    @include mobile {
+      padding-bottom: 15px;
+    }
+
+    @include mobile-small {
+      padding-bottom: 6px;
+    }
+
+    .col-sm-3 {
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      margin-bottom: 2px;
+      line-height: 25px;
+      max-width: 225px;
+
+      @include mobile-small {
+        margin-bottom: 3px;
+      }
+
+      a {
+        font-size: 18px;
+        line-height: 24px;
+
+        @include mobile-small {
+          font-size: 16px;
+        }
+      }
+
+      &:first-child {
+        line-height: 30px;
+      }
+    }
+  }
+  .footer_summary {
+    padding-top: 31px;
+
+    @include mobile {
+      padding-top: 23px;
+    }
+
+    @include mobile-small {
+      padding-top: 21px;
+    }
+
+    .row {
+      @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .copyright {
+      order: 3;
+
+      @include mobile-small {
+        font-size: 17px;
+        margin-top: 1px;
+      }
+    }
+
+    .col-sm-6 {
+      @include tablet {
+        width: calc(75% - 185px)
+      }
+    }
+
+    .footer_nav {
+      padding: 0;
+      margin-bottom: 0;
+      line-height: 27px;
+      
+      li {
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          color: #fff;
+          padding: 0;
+          margin-right: 22px;
+          text-transform: capitalize;
+
+          @media screen and (max-width: 1000px) {
+            margin-right: 20px;
+          }
+        }
+
+        &.active, &:hover {
+          a {
+            color: $primary;
+          }
+        }
+
+        &:last-child a {
+          margin-right: 0;
+        }
+      }
+    }
+    
+    .social_block {
+      @include tablet {
+        width: 185px;
+        padding: 0;
+      }
+      @include mobile {
+        padding-left: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+      }
+      @include mobile-small {
+        padding-bottom: 10px;
+      }
+      a {
+        display: inline-block;
+        margin-right: 13px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1px #fff;
+        font-size: 18px;
+        line-height: 28px;
+        width: 30px;
+        height: 30px;
+        transition: $transition-base;
+        text-align: center;
+        vertical-align: top;
+
+        &.icon-twitter {
+          font-size: 14px;
+        }
+
+        &.icon-gplus:before {
+          vertical-align: -1px;
+        }
+        
+        &:before {
+          transition: $transition-base;
+          color: #fff;
+        }
+        
+        &:hover {
+          box-shadow: inset 0 0 0 1px $primary;
+
+          &:before {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
